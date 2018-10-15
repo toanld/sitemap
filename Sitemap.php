@@ -269,7 +269,7 @@ class Sitemap
         if (is_array($location)) {
             $this->addMultiLanguageItem($location, $lastModified, $changeFrequency, $priority);
         } else {
-            $this->addSingleLanguageItem($location, $lastModified, $changeFrequency, $priority,$arrPictures = []);
+            $this->addSingleLanguageItem($location, $lastModified, $changeFrequency, $priority,$arrPictures);
         }
 
         $this->urlsCount++;
