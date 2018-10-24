@@ -161,9 +161,11 @@ class Sitemap
         $this->writer->setIndent($this->useIndent);
         $this->writer->startElement('urlset');
         $this->writer->writeAttribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9');
-        if ($this->useXhtml) {
-            $this->writer->writeAttribute('xmlns:xhtml', 'http://www.w3.org/1999/xhtml');
-        }
+        $this->writer->writeAttribute('xmlns:image', 'http://www.google.com/schemas/sitemap-image/1.1');
+        $this->writer->writeAttribute('xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
+        $this->writer->writeAttribute('xsi:schemaLocation', 'http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd');
+        $this->writer->writeAttribute('xmlns:xhtml', 'http://www.w3.org/1999/xhtml');
+
 
         /*
          * XMLWriter does not give us much options, so we must make sure, that
